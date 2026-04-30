@@ -70,8 +70,8 @@ scanBtn.addEventListener('click', async () => {
     }, 200);
 
     try {
-        // Fetch from Backend
-        const response = await fetch('/api/scan', {
+// Fetch from Netlify Function (works both locally and on Netlify)
+        const response = await fetch('/.netlify/functions/scan', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ url })
