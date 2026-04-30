@@ -1,14 +1,13 @@
+functionsDirectory = "C:\\Users\\fahad\\OneDrive\\Desktop\\safex\\netlify\\functions"
+functionsDirectoryOrigin = "default"
 plugins = []
 headers = []
 redirects = []
 
-[functions]
-
-[functions."*"]
-
 [build]
 publish = "C:\\Users\\fahad\\OneDrive\\Desktop\\safex"
 publishOrigin = "default"
+functions = "C:\\Users\\fahad\\OneDrive\\Desktop\\safex\\netlify\\functions"
 
 [build.environment]
 
@@ -23,3 +22,7 @@ publishOrigin = "default"
 [build.processing.js]
 
 [build.services]
+
+[functions]
+
+[functions."*"]

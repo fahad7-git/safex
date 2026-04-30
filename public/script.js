@@ -90,9 +90,10 @@ scanBtn.addEventListener('click', async () => {
             resultsDashboard.classList.remove('hidden');
         }, 500);
 
-    } catch (error) {
+} catch (error) {
         clearInterval(uiInterval);
-        alert("An error occurred during analysis. Make sure the backend server is running.");
+        console.error('Scan error:', error);
+        alert("An error occurred during analysis. Please try again or check the console for details.");
         loadingState.classList.add('hidden');
     }
 });
