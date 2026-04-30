@@ -9,6 +9,7 @@ Enterprise-grade URL analysis platform for detecting phishing and malicious webs
 - 🌐 SSL certificate analysis
 - 🔬 DOM sandbox execution
 - 📱 Responsive web dashboard
+- 🌍 Global threat intelligence map
 
 ## Quick Start
 
@@ -22,6 +23,13 @@ npm start
 # Open http://localhost:3000
 ```
 
+## API Endpoint
+
+```
+POST /api/scan
+Body: { "url": "https://example.com" }
+```
+
 ## Tech Stack
 
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
@@ -31,3 +39,7 @@ npm start
 ## License
 
 ISC
+
+---
+
+Built by [Fahad Mahfooz](https://www.linkedin.com/in/fahad-mahfooz-5707862ba/)
