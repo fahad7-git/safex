@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe-X | Next-Gen Threat Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">
+                <i class="ph ph-shield-check"></i>
+                <span>SAFE-X</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div class="nav-tabs" id="nav-tabs">
+            <button class="tab-btn active" data-target="home-tab">
+                <i class="ph ph-house"></i> Home
+            </button>
+            <button class="tab-btn" data-target="scanner-tab">
+                <i class="ph ph-radar"></i> Scanner Dashboard
+            </button>
+            <button class="tab-btn" data-target="about-tab">
+                <i class="ph ph-info"></i> Threat Intelligence
+            </button>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        
+        <!-- ================= HOME TAB ================= -->
+        <section id="home-tab" class="tab-content active">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="badge">Enterprise-Grade URL Analysis</div>
+                        <h1>Unmask The <span class="gradient-text">Invisible Threat</span>.</h1>
+                        <p>Phishing attacks are evolving. Equip yourself with Safe-X's state-of-the-art URL analysis engine to detect deceptive domains before they strike. Built for security teams, available to everyone.</p>
+                        <div class="hero-actions">
+                            <button class="primary-btn glow-btn" onclick="switchTab('scanner-tab')">
+                                Launch Scanner <i class="ph ph-arrow-right"></i>
+                            </button>
+                            <button class="secondary-btn" onclick="switchTab('about-tab')">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image-container">
+                        <img src="assets/hero_cybersecurity.png" alt="Cybersecurity Hologram" class="hero-image">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Threat Stats -->
+            <div class="stats-section">
+                <div class="stat-card glass-card">
+                    <div class="stat-value">2.4M+</div>
+                    <div class="stat-label">URLs Analyzed</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-value text-safe">850K</div>
+                    <div class="stat-label">Threats Blocked</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-value text-warning">&lt; 0.1s</div>
+                    <div class="stat-label">Avg. Scan Latency</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-value">70+</div>
+                    <div class="stat-label">Vendor Engines</div>
+                </div>
+            </div>
+
+            <!-- Detailed Features -->
+            <div class="features-section">
+                <h2 class="section-title">Core Technologies</h2>
+                <div class="features-grid">
+                    <div class="glass-card feature-card">
+                        <i class="ph ph-brain card-icon"></i>
+                        <h3>AI Heuristics</h3>
+                        <p>Our machine learning models analyze structural anomalies and behavioral patterns to detect zero-day phishing campaigns that bypass traditional blacklists.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <i class="ph ph-eye card-icon"></i>
+                        <h3>Visual Similarity</h3>
+                        <p>We render the target page in a headless browser and compare its visual fingerprint against known legitimate brands to catch pixel-perfect clones.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <i class="ph ph-terminal-window card-icon"></i>
+                        <h3>DOM Sandbox Execution</h3>
+                        <p>JavaScript is executed in an isolated environment, allowing us to safely analyze obfuscated payloads and hidden credential-stealing scripts.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- How it works flow -->
+            <div class="how-it-works">
+                <h2 class="section-title">Analysis Pipeline</h2>
+                <div class="flow-container">
+                    <div class="flow-step">
+                        <div class="flow-icon"><i class="ph ph-link"></i></div>
+                        <h4>1. URL Ingestion</h4>
+                        <p>Sanitization and DNS resolution.</p>
+                    </div>
+                    <div class="flow-arrow"><i class="ph ph-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="flow-icon"><i class="ph ph-magnifying-glass"></i></div>
+                        <h4>2. Static Analysis</h4>
+                        <p>SSL, WHOIS, and Blacklist checks.</p>
+                    </div>
+                    <div class="flow-arrow"><i class="ph ph-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="flow-icon"><i class="ph ph-code"></i></div>
+                        <h4>3. Dynamic Crawl</h4>
+                        <p>DOM parsing and JS execution.</p>
+                    </div>
+                    <div class="flow-arrow"><i class="ph ph-arrow-right"></i></div>
+                    <div class="flow-step">
+                        <div class="flow-icon"><i class="ph ph-file-text"></i></div>
+                        <h4>4. Threat Report</h4>
+                        <p>Aggregated scoring and verdict.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SCANNER TAB ================= -->
+        <section id="scanner-tab" class="tab-content">
+            <div class="scanner-header">
+                <h2>Deep Analysis Dashboard</h2>
+                <p>Enter a suspicious URL to generate a comprehensive threat intelligence report.</p>
+            </div>
+
+            <div class="scanner-interface glass-card">
+                <div class="input-group">
+                    <i class="ph ph-link input-icon"></i>
+                    <input type="text" id="url-input" placeholder="https://example.com" autocomplete="off">
+                    <button id="scan-btn" class="primary-btn">Analyze <i class="ph ph-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="hidden">
+                <div class="loader-circle"></div>
+                <p class="loading-text" id="loading-message">Initializing secure connection...</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="scan-progress"></div>
+                </div>
+                <div class="loading-logs" id="loading-logs">
+                    <!-- Logs append here -->
+                </div>
+            </div>
+
+            <!-- Detailed Results Dashboard -->
+            <div id="results-dashboard" class="hidden">
+                <!-- Top Summary Row -->
+                <div class="results-top-row">
+                    <div class="score-container glass-card">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <text x="18" y="20.35" class="percentage" id="score-text">0/100</text>
+                        </svg>
+                        <div class="score-label">
+                            <h3 id="risk-level">Analyzing...</h3>
+                            <span class="url-display" id="scanned-url-display">example.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="target-overview glass-card">
+                        <h4>Target Fingerprint</h4>
+                        <div class="fingerprint-grid">
+                            <div class="fp-item"><strong>IP Address:</strong> <span id="target-ip">--</span></div>
+                            <div class="fp-item"><strong>ASN:</strong> <span id="target-asn">--</span></div>
+                            <div class="fp-item"><strong>Hosting:</strong> <span id="target-hosting">--</span></div>
+                            <div class="fp-item"><strong>Location:</strong> <span id="target-location">--</span></div>
+                            <div class="fp-item"><strong>Registrar:</strong> <span id="target-registrar">--</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card glass-card">
+                        <div class="metric-header"><i class="ph ph-lock-key"></i> SSL Certificate</div>
+                        <div class="metric-value" id="res-ssl">--</div>
+                        <div class="metric-sub" id="res-ssl-sub">--</div>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-header"><i class="ph ph-clock-counter-clockwise"></i> Domain Age</div>
+                        <div class="metric-value" id="res-age">--</div>
+                        <div class="metric-sub" id="res-age-sub">--</div>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-header"><i class="ph ph-bug"></i> Malicious Scripts</div>
+                        <div class="metric-value" id="res-scripts">--</div>
+                        <div class="metric-sub" id="res-scripts-sub">--</div>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-header"><i class="ph ph-arrows-split"></i> Redirects</div>
+                        <div class="metric-value" id="res-redirects">--</div>
+                        <div class="metric-sub" id="res-redirects-sub">--</div>
+                    </div>
+                </div>
+
+                <!-- Deep Technical Details Row -->
+                <div class="technical-row">
+                    <!-- Left Column: Vendors & DNS -->
+                    <div class="tech-col-left">
+                        <div class="glass-card vendor-card">
+                            <h4>Multi-Engine Blacklist Verification</h4>
+                            <table class="vendor-table" id="vendor-table">
+                                <thead>
+                                    <tr>
+                                        <th>Security Vendor</th>
+                                        <th>Verdict</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="glass-card dns-card">
+                            <h4>Network Artifacts (DNS & Headers)</h4>
+                            <div class="code-block" id="dns-headers-block">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Evidence -->
+                    <div class="tech-col-right">
+                        <div class="glass-card evidence-card">
+                            <h4>Visual Sandbox Evidence</h4>
+                            <div class="evidence-image-wrapper">
+                                <img src="assets/scanner_evidence.png" alt="Forensic Scan" class="evidence-img">
+                                <div class="scan-overlay-line"></div>
+                            </div>
+                            <p class="evidence-note"><i class="ph ph-warning"></i> Sandbox rendered screenshot. Image exhibits structural similarities to known high-value targets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Information Section -->
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-link"></i>
+                                <span>URL Information</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-url-info">
+                            <p>Detailed URL information will be displayed here.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-globe"></i>
+                                <span>Domain Information</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-domain-info">
+                            <p>Domain registration and hosting details.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-lock-key"></i>
+                                <span>SSL Certificate Analysis</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-ssl-info">
+                            <p>SSL/TLS certificate chain details and validation.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-columns"></i>
+                                <span>URL Structure Analysis</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-url-structure">
+                            <p>Analysis of URL parameters, paths, and query strings.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-warning"></i>
+                                <span>Security Indicators</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-security-indicators">
+                            <p>Specific security flags and warnings identified.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-file-text"></i>
+                                <span>Content Analysis</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-content-analysis">
+                            <p>DOM analysis, hidden iframes, and scripts.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <div class="accordion-title">
+                                <i class="ph ph-robot"></i>
+                                <span>ML Model Analysis</span>
+                            </div>
+                            <i class="ph ph-caret-down accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content" id="acc-ml-model">
+                            <p>Machine learning heuristic scoring and confidence levels.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= ABOUT TAB ================= -->
+        <section id="about-tab" class="tab-content">
+            
+            <div class="threat-landscape">
+                <div class="landscape-text">
+                    <h2 class="section-title">The Global Threat Landscape</h2>
+                    <p>Phishing remains the primary vector for enterprise breaches. Safe-X aggregates real-time intelligence from our global sensor network, identifying decentralized and polymorphic attack infrastructures within seconds of deployment.</p>
+                </div>
+                <div class="landscape-image-wrapper">
+                    <img src="assets/threat_map_visual.png" alt="Global Threat Map" class="threat-map-img glass-card">
+                </div>
+            </div>
+
+            <div class="about-container">
+                <div class="about-header text-center" style="margin-top: 4rem;">
+                    <h2>Anatomy of an Attack</h2>
+                    <p class="subtitle">Understanding the adversary.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="glass-card about-card">
+                        <i class="ph ph-envelope-open card-icon large-icon"></i>
+                        <h3>Delivery Mechanism</h3>
+                        <p>Attackers use highly targeted spear-phishing emails, SMS (Smishing), and compromised social accounts to bypass spam filters. They employ urgency and authority to manipulate human psychology.</p>
+                    </div>
+                    <div class="glass-card about-card">
+                        <i class="ph ph-globe-network card-icon large-icon"></i>
+                        <h3>Evasive Infrastructure</h3>
+                        <p>Modern campaigns use compromised legitimate WordPress sites, fast-flux DNS, and reverse proxies (like Evilginx) to bypass 2FA and avoid detection by automated crawlers.</p>
+                    </div>
+                    <div class="glass-card about-card">
+                        <i class="ph ph-mask-happy card-icon large-icon"></i>
+                        <h3>Visual Deception</h3>
+                        <p>Using stolen assets and identical CSS frameworks, attackers create pixel-perfect clones of Microsoft, Google, or banking portals, making visual identification nearly impossible for the average user.</p>
+                    </div>
+                    <div class="glass-card about-card">
+                        <i class="ph ph-database card-icon large-icon"></i>
+                        <h3>Data Exfiltration</h3>
+                        <p>Once credentials or session tokens are captured, they are instantly transmitted via encrypted Telegram bots or automated APIs to dark web marketplaces for monetization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developer Profile -->
+            <div class="developer-credit">
+                <h3>Lead Security Researcher</h3>
+                <a href="https://www.linkedin.com/in/fahad-mahfooz-5707862ba/" target="_blank" rel="noopener noreferrer" class="linkedin-btn glass-card">
+                    <i class="ph-fill ph-linkedin-logo"></i>
+                    <span>Fahad Mahfooz</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
